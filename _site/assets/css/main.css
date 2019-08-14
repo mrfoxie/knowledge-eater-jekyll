@@ -10,29 +10,27 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
-  max-width: 100%;
-  background-color: black;
-  border: 2.5px solid #e09738;
+  background-color: #050505;
+  border: 0.5px solid #da871c;
   box-sizing: border-box;
   line-height: 1.2;
   font-size: 16px;
-  font-family: "Source Sans Pro", "Microsoft YaHei", "Source-Han-Sans-Medium", Tahoma, "Segoe UI", "Lucida Grande", "WenQuanYi Micro Hei", Helvetica, Arial, sans-serif, FreeSans, Arimo;
-  font-weight: lighter; }
+  font-family: "Source Sans Pro", "Noto Sans", "Microsoft YaHei", "Source-Han-Sans-Medium", "Droid Sans", "WenQuanYi Micro Hei", Helvetica, "Tahoma", Arial;
+  font-weight: 200; }
   .entirety .browser {
-    position: relative;
-    display: block;
+    position: absolute;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: auto; }
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-all; }
   .entirety .browser::-webkit-scrollbar {
     width: 5px; }
   .entirety .browser::-webkit-scrollbar-thumb {
-    background-color: #e09738; }
+    background-color: #da871c; }
   .entirety .post {
-    padding: 8px 10px;
-    word-wrap: break-word;
-    word-break: break-all; }
+    padding: 6px 12px; }
     .entirety .post .post_info {
       text-align: right;
       padding: 2px 20px; }
@@ -40,70 +38,114 @@
       text-align: center;
       padding: 20px 20px; }
     .entirety .post pre {
-      border: 0.3px solid rgba(224, 151, 56, 0.8); }
+      border: 0.3px solid rgba(218, 135, 28, 0.8); }
     .entirety .post code {
       font-family: "Fira Code", "Souce Code Pro", "Fira Code Remote";
-      font-size: 13px; }
+      font-size: 14px; }
     .entirety .post blockquote {
-      margin: 1px 13px;
+      margin: 3px 20px;
       padding: 0;
-      background-color: rgba(224, 151, 56, 0.1);
+      background-color: rgba(218, 135, 28, 0.1);
       font-style: italic;
       font-size: 90%; }
+      .entirety .post blockquote p {
+        margin: 2px 2px; }
+  .entirety .toolbar {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 26pt;
+    height: 100%; }
+    .entirety .toolbar .tool {
+      display: inline-block;
+      height: 26pt;
+      width: 26pt;
+      line-height: 26pt;
+      font-size: 10pt;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle; }
+      .entirety .toolbar .tool .fa {
+        font-size: 14pt;
+        line-height: 26pt; }
+    .entirety .toolbar .tool:hover {
+      background-color: #da871c;
+      color: #050505; }
+  .entirety .toolbar::-webkit-scrollbar {
+    width: 0; }
+  .entirety .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 73%;
+    height: 100%; }
   .entirety .archive {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     height: 50%;
-    width: 100;
-    border-bottom: 2.5px solid #e09738; }
+    width: 27%; }
+    .entirety .archive .browser {
+      width: auto;
+      right: 26pt;
+      border-bottom: 0.5px solid #da871c;
+      border-left: 0.5px solid #da871c;
+      border-right: 0.5px solid #da871c; }
+    .entirety .archive .toolbar {
+      top: 0;
+      right: 0;
+      border-bottom: 0.5px solid #da871c; }
   .entirety .outline {
     position: absolute;
     bottom: 0;
-    left: 0;
-    height: 50%;
-    width: 100%; }
-  .entirety .toolbar {
-    position: absolute;
-    top: 0;
     right: 0;
-    width: 80%;
-    height: 100%; }
+    height: 50%;
+    width: 27%; }
+    .entirety .outline .browser {
+      width: auto;
+      right: 26pt;
+      border-left: 0.5px solid #da871c;
+      border-right: 0.5px solid #da871c; }
+    .entirety .outline .toolbar {
+      bottom: 0;
+      right: 0;
+      float: bottom; }
   .entirety .fa {
     font-size: 84%; }
 
 body {
-  color: #e09738; }
+  color: #da871c;
+  margin: 0; }
   body h1 {
     font-size: 24.5px;
     text-transform: uppercase;
     text-align: center !important;
-    font-weight: lighter;
+    font-weight: 200;
     margin: 32px 0px 22px 0px; }
   body h2 {
     font-size: 24.5px;
-    font-weight: lighter;
+    font-weight: 200;
     text-transform: capitalize;
-    border-bottom: 0.3px solid rgba(224, 151, 56, 0.8); }
+    border-bottom: 0.3px solid rgba(218, 135, 28, 0.8); }
   body h3 {
     font-size: 22.5px;
     text-transform: capitalize;
-    font-weight: lighter; }
+    font-weight: 200; }
   body h4 {
     font-size: 22.5px;
-    font-weight: lighter; }
+    font-weight: 200; }
   body h5 {
     font-size: 16px;
-    font-weight: lighter; }
+    font-weight: 200; }
   body h6 {
-    font-size: 13px;
-    font-weight: lighter; }
+    font-size: 14px;
+    font-weight: 200; }
   body p {
     margin: 6px 11px;
-    font-weight: lighter; }
+    font-weight: 200; }
   body hr {
     border: 0;
-    border-top: 0.3px solid rgba(224, 151, 56, 0.8);
+    border-top: 0.3px solid rgba(218, 135, 28, 0.8);
     margin: 0 0 0 0; }
   body video {
     margin: 0;
@@ -115,32 +157,52 @@ body {
   body textarea {
     margin: 0;
     padding: 0;
-    border: 0.3px solid rgba(224, 151, 56, 0.8);
-    background-color: rgba(0, 0, 0, 0.7);
+    border: 0.3px solid rgba(218, 135, 28, 0.8);
+    background-color: rgba(5, 5, 5, 0.7);
     color: #e28574;
     font-size: 15px; }
   body button {
-    border: 0.3px solid rgba(224, 151, 56, 0.8);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #e09738; }
+    border: 0.3px solid rgba(218, 135, 28, 0.8);
+    background-color: rgba(5, 5, 5, 0.7);
+    color: #da871c; }
   body a {
-    color: #e09738; }
+    color: #da871c; }
   body a:link {
     font-style: underline; }
   body a:hover {
-    color: #e28574; }
+    color: #050505;
+    background-color: #da871c; }
   body img {
     max-width: 100%; }
   body table {
-    font-weight: lighter;
+    font-weight: 200;
     width: 100%; }
     body table thead {
-      border-top: 1px solid #e09738;
-      border-bottom: 0.3px solid rgba(224, 151, 56, 0.8); }
+      border-top: 1px solid #da871c;
+      border-bottom: 0.3px solid rgba(218, 135, 28, 0.8); }
     body table th {
       font-weight: normal;
       padding: 1px 4px; }
     body table tbody {
-      border-bottom: 1px solid #e09738; }
+      border-bottom: 1px solid #da871c; }
     body table td {
       padding: 1px 3px; }
+
+@media screen and (max-width: 800px) {
+  .entirety .left {
+    width: 100%;
+    height: 56%;
+    border-bottom: 0.5px solid #da871c; }
+  .entirety .archive {
+    width: 50%;
+    height: 44%;
+    top: auto;
+    left: 0;
+    bottom: 0; }
+    .entirety .archive .browser {
+      border-left: none; }
+  .entirety .outline {
+    width: 50%;
+    height: 44%;
+    right: 0;
+    bottom: 0; } }
