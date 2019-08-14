@@ -1,0 +1,224 @@
+<!-- FILE STRUCTURE
+- header
+- container
+    - col-sm-7
+        - browser
+    - col-sm-5
+        - archive
+            - tag-list
+            - post-list
+        - ouline
+            - button-list
+            - functional-field
+            - plugins 
+- scripts -->
+<head>
+  <meta charset="utf-8" />
+  <!-- viewport -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <!-- site description -->
+  
+  <meta name="description" content="This is excerpt." />
+  <!-- referer for 3rd-part images-->
+  <meta name="referrer" content="no-referrer" />
+  <!-- title -->
+  <title>
+    
+    Text Styles and Markdown Quick Reference
+    
+  </title>
+  <!-- icon -->
+  <link
+    href="http://localhost:4000/assets/img/favicon.ico?"
+    rel="shortcut icon bookmark"
+    type="image/x-icon"
+  />
+  <!-- fa 5.9.0 -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css"
+  />
+  <!-- rouge -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/assets/css/rouge-bg.css"
+  />
+  <!-- mathjax 2.7.5 -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+    async
+  ></script>
+  <!-- main css -->
+  <link
+    rel="stylesheet"
+    href="http://localhost:4000/assets/css/main.css"
+    type="text/css"
+  />
+</head>
+<body>
+  <div class="entirety">
+  <div class=" browser">
+    <article
+      class="post"
+      id="post"
+      itemscope
+      itemtype="http://schema.org/BlogPosting"
+    >
+      <h1>Text Styles and Markdown Quick Reference</h1>
+      <div class="post_info">
+        <!-- address -->
+         &nbsp;
+        <!-- author -->
+        
+        <span>
+          <i class="fa fa-user-secret"></i>
+          DeerRIDER
+        </span>
+         &nbsp;
+        <!-- date -->
+        
+        <span>
+          <i class="fa fa-clock-o"></i>
+          Mar 03, 2017
+        </span>
+         &nbsp;
+        <!-- category -->
+        
+        <span>
+          <i class="fa fa-tag"></i>
+          
+        </span>
+        
+      </div>
+      <!-- abstract -->
+      <div class="abstract">
+        
+        <p>This is abstract. Abstract is blank by default.</p>
+        
+      </div>
+      <!-- content -->
+      <h2 id="style-test-below">Style Test Below</h2>
+
+<h3 id="text">Text</h3>
+
+<p>Wand fest wa gét. D’Welt weisen Fréijor ze ech. Da d’Land Faarwen nei, dé fir rëscht blëtzen.</p>
+
+<p>Encrypted text:<br /></p>
+<p class="encrypted">elKwQPCOLF4w86wRItKMqge8qDO6fU80wbdANG6AnS8kgT8qAqGFC5VkVexu+4RBhBMUWwdkzEVo8HAKUT</p>
+
+<p>normal, <strong>bold</strong>, <em>italic</em>, <del>strikethrough</del>, <code class="highlighter-rouge">keyword</code>, <a href="www.google.com">link</a></p>
+
+<blockquote>
+  <p>blockquote</p>
+
+  <p>Den wa Stad Schuebersonndeg, op all d’Pan hinnen. Ké net geet sech Mier, ass gutt Kaffi an.</p>
+</blockquote>
+
+<h3 id="code">Code</h3>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="formula">Formula</h3>
+
+<script type="math/tex; mode=display">NADH+Q+5\;H_{matrix}^{+}\rightarrow NAD^{+}+QH_{2}+4\;H_{intermembrane}^{+}\!</script>
+
+<h3 id="list">List</h3>
+<ol>
+  <li>ordered list item 1</li>
+  <li>ordered list item 2
+    <ol>
+      <li>sublist
+        <ol>
+          <li>subsublist
+            <ul>
+              <li>unordered list</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<ul>
+  <li>unordered sublist
+    <ul>
+      <li>subsublist
+        <ul>
+          <li>subsubsublist</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="horizontal-line">horizontal line</h3>
+
+<hr />
+
+<h3 id="table">Table</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">surprise</th>
+      <th style="text-align: left">surprise</th>
+      <th style="text-align: left">maza faka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">fark</td>
+      <td style="text-align: left">Ya</td>
+      <td style="text-align: left">maza faka</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">babe</td>
+      <td style="text-align: left">surprise</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">maza faka</td>
+      <td style="text-align: left">surprise</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">surprise</td>
+      <td style="text-align: left">maza faka</td>
+      <td style="text-align: left">surprise surprise surprise maza faka maza faka maza faka kakakakak</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="image">image</h3>
+<p><img src="http://localhost:4000/img/img-sample.jpg" alt="img-smpl" /></p>
+
+<h3 id="heading">heading</h3>
+<h4 id="this-is-heading-4">This is heading 4</h4>
+<h5 id="this-is-heading-5">This is heading 5</h5>
+<h6 id="this-is-heading-6">This is heading 6</h6>
+
+    </article>
+  </div>
+</div>
+
+  <!-- scripts -->
+  <scripts>
+    <!-- jquery 3.3.1 -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+  </scripts>
+</body>

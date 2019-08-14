@@ -5,40 +5,130 @@ Jekyll Assets: start scss files with two lines of triple dashes
 @charset "utf-8";
 
 // global reset
-$color-primary: rgb(245, 202, 61);
-$color-warning: rgb(194, 5, 5);
+$color-primary: rgb(224, 151, 56);
+$color-warning: rgb(226, 133, 116);
 $color-background: rgb(0, 0, 0);
-$color-postbg: rgb(0, 0, 0);
 $image-background: none;
 @font-face {
-  font-family: "Fira Code";
+  font-family: "Fira Code Remote";
   src: url("../fonts/FiraCode-Regular.woff");
 }
-$font-family: "Fira Code", "Source-Han-Sans-Medium", Helvetica, Tahoma, Arial,
-  "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei",
-  "WenQuanYi Micro Hei", sans-serif;
-$font-size-large: 25px;
+$font-family: 
+"Source Sans Pro",
+"Microsoft YaHei",
+"Source-Han-Sans-Medium",
+Tahoma,
+"Segoe UI",
+"Lucida Grande",
+"WenQuanYi Micro Hei",
+Helvetica,
+Arial,
+sans-serif,
+FreeSans,
+Arimo;
+$font-family-code:
+"Fira Code",
+"Souce Code Pro",
+"Fira Code Remote";
+$border-slim: 0.3px solid rgba($color-primary, 0.8);
+$border-spilter: 1px solid $color-primary;
+$border-frame: 2.5px solid $color-primary;
+$font-size-large: 24.5px;
 $font-size-secondary: 22.5px;
-$font-size-normal: 18px;
-$font-size-small: 16px;
- 
+$font-size-normal: 16px;
+$font-size-small: 13px;
 
-
-//
-.container {
+// objects
+.entirety {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  background-color: $color-background;  
+  border: $border-frame;
+  box-sizing: border-box;  
+  line-height: 1.2;
+  font-size: $font-size-normal;
+  font-family: $font-family;
+  font-weight: lighter;
   .browser {
-
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  // scroll bar
+  .browser::-webkit-scrollbar {
+    width: 5px;
+  }
+  .browser::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+  }
+  .post {
+    padding: 8px 10px; 
+    word-wrap: break-word;
+    word-break: break-all;
+    .post_info {
+      text-align: right;
+      padding: 2px 20px;
+    }
+    .abstract {
+      text-align: center;
+      padding: 20px 20px;
+    }
+    pre {
+      border: $border-slim;
+    }
+    code {
+      font-family: $font-family-code;
+      font-size: $font-size-small;
+    }
+    blockquote {
+      margin: 1px 13px;
+      padding: 0;
+      background-color: rgba($color-primary, 0.1);
+      font-style: italic;
+      font-size: 90%;
+    }
   }
   .archive {
-
+    position: absolute;  
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100;
+    border-bottom: $border-frame;
   }
   .outline {
-
+    position: absolute;  
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  .toolbar {
+    position: absolute;  
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+  }
+  .fa {
+    font-size: 84%;
   }
 }
-// global markup reset
+
+// global basic settings
 body {
   // texts
+  color: $color-primary;
   h1 {
     font-size: $font-size-large;
     text-transform: uppercase;
@@ -47,10 +137,10 @@ body {
     margin: 32px 0px 22px 0px;
   }
   h2 {
-    font-size: $font-size-secondary;
+    font-size: $font-size-large;
     font-weight: lighter;
     text-transform: capitalize;
-    border-bottom: 0.6px solid rgba($color-primary, 0.3);
+    border-bottom: $border-slim;
   }
   h3 {
     font-size: $font-size-secondary;
@@ -58,9 +148,8 @@ body {
     font-weight: lighter;
   }
   h4 {
-    font-size: $font-size-normal;
+    font-size: $font-size-secondary;
     font-weight: lighter;
-    font-style: 
   }
   h5 {
     font-size: $font-size-normal;
@@ -71,11 +160,12 @@ body {
     font-weight: lighter;
   }
   p {
-    margin: 10px;
+    margin: 6px 11px;
+    font-weight: lighter;
   }
   hr {
     border: 0;
-    border-top: 1px solid rgba($color-primary, 0.6);
+    border-top: $border-slim;
     margin: 0 0 0 0;
   }
   video {
@@ -89,14 +179,14 @@ body {
   textarea {
     margin: 0;
     padding: 0;
-    border: 0.5px solid rgba($color-primary, 0.9);
-    background-color: rgba($color-postbg, 0.7);
+    border:$border-slim;
+    background-color: rgba($color-background, 0.7);
     color: $color-warning;
     font-size: 15px;
   }
   button {
-    border: 0.8px solid rgba($color-primary, 0.9);
-    background-color: rgba($color-postbg, 0.7);
+    border: $border-slim;
+    background-color: rgba($color-background, 0.7);
     color: $color-primary;
   }
   // links
@@ -107,13 +197,30 @@ body {
     font-style: underline;
   }
   a:hover {
-    font-weight: bold;
+    color: $color-warning;
   }
   img {
     max-width: 100%;
   }
+  table {
+    font-weight: lighter;
+    width: 100%;
+    thead {
+      border-top: $border-spilter;
+      border-bottom: $border-slim;
+    }
+    th {
+      font-weight: normal;
+      padding: 1px 4px;
+    }
+    tbody{
+      border-bottom: $border-spilter;
+    }
+    td{
+      padding: 1px 3px;
+    }
+  }
 }
-// screen max width <= 900 px
-@media screen and (max-width: 900px) {
-  
+// screen max width <= 800 px
+@media screen and (max-width: 800px) {
 }
